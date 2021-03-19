@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Formularios</title>
+  </head>
+  <body>
+
+
+
+
+
+    <div class="container">
+      <div class="row my-3">
+
+
+
+        <div class="col-5 border border-secondary m-3">
+
+
+          <form action="">
+            <div class="form-group">
+              <label for="primerCampo">Primer Campo</label>
+              <input type="text" name="primerCampo" id="primerCampo" class="form-control" placeholder="Mi primer campo">
+            </div>
+            <div class="form-group">
+              <label for="segundoCampo">Segundo campo</label>
+              <input type="password" name="segundoCampo" id="segundoCampo" class="form-control" placeholder="Mi psegundo campo">
+            </div>
+            <div class="form-group">
+              <select name="" id="" class="form-control">
+                <option value="">México</option>
+                <option value="">España</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select name="" id="" multiple class="form-control">
+                <option value="">25</option>
+                <option value="">26</option>
+                <option value="">27</option>
+              </select>
+            </div>
+             <div class="form-group">
+                <input type="file" class="form-control-file">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control form-control-lg" placeholder="Lg">
+              <input type="text" class="form-control form-control" placeholder="Normal">
+              <input type="text" class="form-control form-control-sm" placeholder="Sm">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" readonly placeholder="Readonly">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control-plaintext" readonly value="Plain Text">
+            </div>
+          </form>
+
+          <form action="" class="form-inline">
+            <div class="form-group">
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group mx-sm-3">
+              <input type="text" class="form-control">
+            </div>
+          </form>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+
+
+
+
+
+    
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+  </body>
+</html>

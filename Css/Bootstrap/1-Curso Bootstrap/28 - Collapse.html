@@ -3,73 +3,75 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
 
     <title>Collapse</title>
   </head>
   <body>
+
+
     <div class="container">
       <div class="row">
         <div class="col-12">
+        
           <p>
-            <a href="#tarjeta" role="button" data-toggle="collapse" class="btn btn-success">Desplegar</a>
-            <button data-target="#tarjeta2" data-toggle="collapse" class="btn btn-info">Desplegar tarjeta 2</button>
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#Mensaje" role="button" aria-expanded="false" aria-controls="collapseExample">
+              Link with href
+            </a>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#Mensaje" aria-expanded="false" aria-controls="collapseExample">
+              Button with data-bs-target
+            </button>
           </p>
-          <div class="collapse" id="tarjeta">
+          <div class="collapse" id="Mensaje">
             <div class="card card-body">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam repellat illum, voluptates hic distinctio tenetur est iste animi quaerat numquam.
+              Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
             </div>
           </div>
-          <div class="collapse" id="tarjeta2">
-            <div class="card card-body">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam repellat illum, voluptates hic distinctio tenetur est iste animi quaerat numquam.
-            </div>
-          </div>
-        </div>
-        <div class="col-12">
-          <div class="accordion" id="miAcordeon">
-            <div class="card bg-primary text-white">
-              <div class="card-header" id="card1">
-                <button class="btn btn-light" data-toggle="collapse" data-target="#contenido1">
-                  Desplegar 1
-                </button>
-              </div>
-            </div>
 
-            <!-- Contenido 1 -->
-            <div id="contenido1" class="collapse" data-parent="#miAcordeon" aria-labelledby="card1">
-              <div class="card-body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, ipsam!
-              </div>
-            </div>
-            <!-- Parte 2 -->
-            <div class="card bg-primary text-white">
-              <div class="card-header" id="card2">
-                <button class="btn btn-success" data-toggle="collapse" data-target="#contenido2">
-                  Desplegar 2
-                </button>
-              </div>
-            </div>
 
-            <!-- Contenido 1 -->
-            <div id="contenido2" class="collapse" data-parent="#miAcordeon">
-              <div class="card-body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, ipsam!
+          
+              <!-- ////////////////////////////////// -->
+          
+              <p>
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+              </p>
+              <div class="row">
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class="card card-body">
+                      Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapseExample2">
+                    <div class="card card-body">
+                      Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+          
+              <!-- ////////////////////////////////// -->
+              
+
+
+
         </div>
       </div>
     </div>
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    
   </body>
 </html>
