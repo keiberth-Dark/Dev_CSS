@@ -1,24 +1,14 @@
-### Devv Web Frontend
+### Dev_css
 
-- HTML5
+
 - CSS3
 - SVG
-- Bootstrap
-- Figma
-- Markdown 
-- JavaScript
-- TypeScript
-- Webpack
-- Git
-- GitHub
-- React
-- Node
-- Express
-- Stripe
-- MongoDB
-- GraphQL
-- esLint
-- cypress
+- Bootstrap 
+- Materialize
+- Tailwind 
+- Sass
+- postCSS
+- Less
 
 
 # Editor.md
