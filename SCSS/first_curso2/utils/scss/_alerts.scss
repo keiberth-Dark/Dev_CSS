@@ -1,0 +1,96 @@
+/* 
+*   Function 
+ */
+
+@function color($name) {
+  @return map-get($map: $palette, $key: $name);
+}
+
+@function reduceColor($name, $amount) {
+  @return lighten(color($name), $amount);
+}
+
+/* funciones complejas if else */
+
+@function changeColor($name, $type: darken, $amount: 1, $colorMix: #fff) {
+  $color: color($name);
+
+  @if $type == darken {
+    $color: darken($color, $amount);
+  }
+
+  @else if $type == lighten {
+    $color: lighten($color, $amount);
+  }
+
+  @else if $type == mixcolor {
+    $findcolor: color($colorMix);
+    @if ($findcolor){
+      $colorMix: $findcolor;
+    }
+    $color: mix($color, $colorMix);
+  }
+
+  @else {
+    //Add Opacity
+    $color: rgba($color, $amount);
+  }
+
+  @return $color;
+}
+
+
+
+.alert {
+  &-primary,
+  &-danger,
+  &-function1,
+  &-function2 {
+    width: calc(100% - 1rem - 30px);
+    padding: 15px;
+    margin: 0.5rem;
+    border-radius: 10px;
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    color: color("white");
+  }
+
+  &-primary {
+    background: color("primary");
+  }
+
+  &-danger {
+    background: reduceColor("danger", 10);
+  }
+
+  &-function1 {
+    background: changeColor("primary", other, 0.75, );
+  }
+
+  &-function2 {
+    background: changeColor("danger", mixcolor, 10, map-get($map: $palette, $key: primary));
+  }
+
+}
+
+/* @EACH */
+
+@each $size in $titles {
+  .title-#{$size}{
+    font-size: $size * 1px;
+  }
+}
+
+@each $name, $size in $titles_2 {
+  .title-#{$name}{
+    font-size: $size;
+  }
+}
+
+@each $name, $size, $fw in $titles_3 {
+  .title-#{$name}{
+    font-size: $size;
+    font-weight: $fw;
+  }
+}
