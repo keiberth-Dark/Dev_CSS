@@ -1,0 +1,120 @@
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+  font-family: "Montserrat", sans-serif;
+}
+
+$text-color: #fff;
+$main-color: #131A36;
+$sidebar-color: #1E274E;
+
+
+/* Normalize */
+
+ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  
+  li{
+    width: 100%;
+    a{
+      display: block;
+      i{
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
+/* Main Containers */
+
+main{
+  width: calc(100% - 300px);
+  margin-left: 300px;
+}
+
+nav.menu{
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $sidebar-color;
+  .menu-links{
+    width: 90%;
+    margin-left: 10%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+%level1{
+  color: $text-color;
+  font-size: 20px;
+  padding: 20px 0;
+  font-weight: 500;
+  transition: 0.25s all ease-in-out;
+  &:hover{
+    box-shadow: 0px 0px 8px -4px rgba(255, 255, 255, 1);
+    /* border-radius: 10px 0 0 10px; */
+    padding-left: 20px;
+    cursor: pointer;
+  }
+}
+%level2{
+  padding-left: 10px;
+  background: $main-color;
+  font-size: 15px;
+  padding: 15px 0 15px 10px;
+  &:hover{
+    box-shadow: 0px 0px 8px 0px $main-color;
+    /* border-radius: 0 50px 50px 0; */
+    color: $main-color;
+    background: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-left: 10px solid $main-color;
+  }
+}
+%level3{
+  font-size: 12px;
+}
+
+
+
+
+@mixin generateMenu($l:3) {
+  $base: "ul>li";
+  $root: "";
+  @for $v from 1 to $l + 1 {
+    $root: #{$root} #{$base};
+    #{$root}{
+      margin-left: ($v - 1) * 50px;
+      position: relative;
+      > ul {
+        display: none;
+        position: absolute;
+        z-index: 1;
+      }
+      &:hover > ul{
+        display: block;
+      }
+      a {
+        @extend %level#{$v}
+      }
+    }
+  }
+}
+
+
+@include generateMenu();

@@ -1,0 +1,47 @@
+
+
+
+
+
+
+/*  */
+
+$ncols: 12;
+
+$brackpoints: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+);
+
+@mixin cols($bks, $cols, $prefix){
+  @each $name, $bk in $bks {
+    @media (min-width: $bk) {
+      @for $i from 1 to $cols + 1 {
+        .#{$prefix}-#{$name}-#{$i}{
+          width: (($i * 100) / $cols) * 1%;
+        }
+      }
+    }
+  }
+
+
+
+
+  @for $i from 1 to $cols + 1 {
+    .#{$prefix}-#{$i}{
+      width: (($i * 100) / $cols) * 1% ;
+    }
+  }
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@include cols($brackpoints, $ncols, "col");

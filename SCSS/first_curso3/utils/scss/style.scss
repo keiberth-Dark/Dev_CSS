@@ -60,5 +60,6 @@ $titles_3: "xs_fw" 16px 400, "md_fw" 20px 500, "lg_fw" 24px 600, "xl_fw" 32px 90
 	background: map-get($map: $palette, $key: "orange");
 }
 
-
-@import "alerts";
+@import "cols",
+        "Menu",
+        "toast";

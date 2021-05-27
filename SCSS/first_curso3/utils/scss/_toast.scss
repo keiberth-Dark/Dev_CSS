@@ -1,0 +1,114 @@
+
+//$colors: "primary" $primary, "success" $success, "danger" $danger;
+  $position : "left" "bottom", "left" "top", "right" "bottom", "right" "top";
+
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+  font-family: "Montserrat", sans-serif;
+}
+
+.toast{
+  width: 300px;
+  padding: 16px;
+  border-radius: 5px;
+  position: absolute;
+  display: flex;
+  box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  margin-bottom: 16px;
+  &_close{
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    color: #000;
+    &:hover{
+      opacity: 0.75;
+      cursor: pointer;
+    }
+  }
+  &_image{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/Sass.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    box-shadow: 2px 0px 5px -2px rgba(0, 0, 0, 0.5);
+  }
+
+  &_info{
+    margin-left: 104px;
+  }
+
+  &_title{
+    margin-bottom: 8px;
+    font: {
+      weight: 600;
+      size: 16px;
+    }
+  }
+
+  &_description{
+    font-size: 12px;
+    margin: 0 0 12px 0;
+  }
+
+  &_btn{
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
+    float: right;
+    background: #000;
+    color: #fff;
+    font-weight: 600;
+    outline: none;
+    &:hover{
+      opacity: 0.75;
+      cursor: pointer;
+    }
+  }
+  &-simple{
+    .toast_info{
+      margin-left: 4px;
+      width: 100%;
+    }
+  }
+
+  @each $x, $y in $position {
+    &-#{$x}-#{$y} , &-#{$y}-#{$x}{
+      position: fixed;
+      @if $x == "left" {
+        left: 16px;
+      } @else {
+        right: 16px;
+      }
+      @if $y == "top" {
+        top: 16px;
+      } @else {
+        bottom: 16px;
+      }
+    }
+  }
+}
+
+
+@each $name, $color in $palette {
+  .toast-#{$name}{
+    background: $color;
+    color: #fff;
+    .toast_close{
+      color: #fff;
+    }
+    .toast_btn{
+      color: $color;
+      background: #fff;
+    }
+  }
+}
