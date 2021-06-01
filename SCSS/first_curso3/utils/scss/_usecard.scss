@@ -1,0 +1,18 @@
+
+
+
+
+.ucard{
+  @extend .card_;
+  max-width: 300px;
+  text-align: center;
+  > img{
+    @extend .avatar_;
+  }
+  >h3{
+    @extend .title_, .main-title;
+  }
+  > small{
+    @extend .small_;
+  }
+}
