@@ -23,18 +23,18 @@ h2 {
 }
 
 .contenedor-flex {
-    /* display:inline-flex; */
     display: flex;
     border: 3px solid black;
+    /* Direcciones */
+    flex-direction: column;
+    /* flex-direction: row;
+    flex-direction: row-reverse;
+    flex-direction: column-reverse; */
 }
-
+ 
 .elemento-flex {
     padding: 10px;
     background-color: #E53935;
-    /* Crecer con Flex**/ 
-}
-.elemento-flex:nth-child(1) {
-
 }
 
 .elemento-flex:nth-child(2) {

@@ -1,0 +1,22 @@
+{
+  "name": "developer_css",
+  "version": "1.0.0",
+  "description": "- CSS3\r - SVG\r - Bootstrap \r - Materialize\r - Tailwind \r - Sass\r - postCSS\r - Less",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src/",
+    "lint-fix": "eslint src/ --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-config-google": "",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "prettier": "^2.2.1"
+  }
+}
