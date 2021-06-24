@@ -24,16 +24,16 @@ h2 {
 
 .contenedor-flex {
     display:flex;
-    display: flex;
     border: 3px solid black;
 }
 
 .elemento-flex {
     padding: 10px;
-    background-color: #E53935;
 }
+
 .elemento-flex:nth-child(1) {
     order: 2;
+    background-color: #E53935;
 }
 
 .elemento-flex:nth-child(2) {
