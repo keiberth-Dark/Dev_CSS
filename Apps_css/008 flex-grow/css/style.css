@@ -19,3 +19,47 @@ p {
     font-size: 1.2rem;
 }
 
+.contenedor{
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media(min-width:760px){
+.nosotros{
+  flex: 0 0 70%;
+}
+
+.sidebar{
+  flex: 0 0 30%;
+}
+}
+
+.servicios{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.servicio{
+  background-color: cornflowerblue;
+  flex: 0 0 100%;
+}
+
+.doble{
+  background-color: bisque;
+}
+
+
+
+@media (min-width:760px) {
+  .servicio{
+    flex: 1;
+  }
+  
+  .doble{
+    flex: 2!important;
+  }
+}
+
