@@ -4,7 +4,7 @@
   "description": "- CSS3\r - SVG\r - Bootstrap \r - Materialize\r - Tailwind \r - Sass\r - postCSS\r - Less",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint src/",
+    "lint": "eslint /",
     "lint-fix": "eslint src/ --fix"
   },
   "keywords": [],
