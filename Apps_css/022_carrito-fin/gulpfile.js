@@ -12,15 +12,29 @@ function css() {
 		.pipe(sass({
 			outputStyle: 'expanded', // nested, compact, compressed
 		}))
-		.pipe(gulp.dest('css'));
+		.pipe(gulp.dest('css'));/* destino de scss a css */
 }
 
+
+/* watch sera el que esta atento a cualquier cambio para actualizar */
 function watchFiles() {
 	gulp.watch('scss/*.scss', css);
 	gulp.watch('index.html');
 }
 
 
+/* 
+
+	En este apartado seran los script 
+	Ejemplo 
+	/dev_css$ gulp css /
+	/dev_css$ gulp watch /
+
+*/
 // Registrar funciones como tareas
 gulp.task('css', css);
-gulp.task('watch', gulp.parallel(watchFiles));
+gulp.task('watch', function() {
+	gulp.parallel(watchFiles)
+});
+
+
