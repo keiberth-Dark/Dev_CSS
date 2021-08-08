@@ -19,7 +19,7 @@ function css() {
 /* watch sera el que esta atento a cualquier cambio para actualizar */
 function watchFiles() {
 	gulp.watch('scss/*.scss', css);
-	gulp.watch('index.html');
+	//gulp.watch('index.html');
 }
 
 
@@ -33,8 +33,12 @@ function watchFiles() {
 */
 // Registrar funciones como tareas
 gulp.task('css', css);
-gulp.task('watch', function() {
+gulp.task('watch', watchFiles);
+
+
+
+/* gulp.task('watch', function() {
 	gulp.parallel(watchFiles)
-});
+}); */
 
 
