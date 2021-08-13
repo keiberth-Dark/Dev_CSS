@@ -1,45 +1,52 @@
-body{
-    font-family: 'Roboto', sans-serif;
+body {
+  font-family: 'Roboto', sans-serif;
 }
+
 h1 {
-    text-align: center;
-    font-size: 2.4rem;
-    font-weight: 300;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 300;
 }
+
 .contenedor {
-    max-width: 1100px;
-    margin: 0 auto;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .blog {
-    display: flex;
-    flex-flow: column wrap;
-    max-height: 4500px;
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 4500px;
 
 }
+
 .entrada {
-    -webkit-box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.28);
-    -moz-box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.28);
-    box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.28);
-    margin-bottom: 3rem;
-    width: calc(50% - 1rem);
-    background-color: white;
+  -webkit-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.28);
+  box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.28);
+  margin-bottom: 1.5rem;
+  width: calc(50% - 1rem);
+  background-color: white;
 }
 
 @media screen and (min-width: 768px) {
-    .blog {
-        max-height: 3000px;
-    }
-    .entrada {
-        width: calc(33% - 1rem);
-    }
+  .blog {
+    max-height: 3000px;
+  }
+
+  .entrada {
+    width: calc(33% - 1rem);
+  }
 }
+
 .entrada img {
-    max-width: 100%;
+  max-width: 100%;
 }
+
 .entrada .contenido {
-    padding: 1rem;
+  padding: 1rem;
 }
+
 .entrada .contenido h2 {
-    margin: 0;
+  margin: 0;
 }
