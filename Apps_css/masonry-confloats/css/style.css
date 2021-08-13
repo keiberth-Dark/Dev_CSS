@@ -1,0 +1,50 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.blog {
+    
+}
+.entrada {
+    -webkit-box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.28);
+    -moz-box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.28);
+    box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.28);
+    margin-bottom: 3rem;
+    background-color: white;
+    float: left;
+    margin-right: 1rem;
+    width: calc( 50% - 1rem);
+}
+.entrada:nth-child(2n+2) {
+    margin-right: 0;
+}
+@media screen and (min-width: 768px){
+    .entrada{
+        width: calc(33.3% - 1rem);
+    }
+    .entrada:nth-child(2n+2) {
+        margin-right: 1rem;
+    }
+    .entrada:nth-child(2n+3) {
+        margin-right: 0;
+    }
+
+}
+.entrada img {
+    max-width: 100%;
+}
+.entrada .contenido {
+    padding: 1rem;
+}
+.entrada .contenido h2 {
+    margin: 0;
+}
