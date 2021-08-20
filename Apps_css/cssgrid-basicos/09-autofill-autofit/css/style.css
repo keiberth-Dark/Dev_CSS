@@ -1,34 +1,57 @@
-
 h2 {
-    margin: 0;
+  margin: 0;
 }
+
 .servicios {
-    border: 3px solid black;
-    height: 300px;
-    display:grid;
+  border: 3px solid black;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 200px);
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+
+
+
+
+
 }
+
+
+
+
+
 
 .servicio {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
 }
 
 .servicio-1 {
-    background-color: darkviolet;
+  background-color: darkviolet;
 }
 
 .servicio-2 {
-    background-color: rgb(8, 77, 8);
+  background-color: rgb(8, 77, 8);
 }
+
 .servicio-3 {
-    background-color: teal;
+  background-color: teal;
 }
+
 .servicio-4 {
-    background-color: cornflowerblue;
+  background-color: cornflowerblue;
 }
+
 .servicio-5 {
-    background-color: crimson;
+  background-color: crimson;
 }
+
 .servicio-6 {
-    background-color: darkmagenta;
+  background-color: darkmagenta;
 }

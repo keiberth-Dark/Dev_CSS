@@ -1,25 +1,39 @@
-
 h2 {
-    margin: 0;
+  margin: 0;
 }
+
 .servicios {
-    border: 3px solid black;
-    height: 300px;
-    display: grid;
+  border: 3px solid black;
+  height: 300px;
+  display: grid;
+  /* grid-template-columns: 33.3% 33.3% 33.3%; */
+  grid-template-columns: repeat(3, 33.3%);
+  grid-template-rows: repeat(2, 50%);
+  /* 
+        shorthand
+    grid-template-colums: repeat(3, 33,3%); 
+    */
+
+  grid: repeat(2, 50%) / repeat(3, 33.3%);
+  grid: repeat(2, 50%) / 50% repeat(2, 25%);
+  grid: repeat(2, 50%) / repeat(2, 10% 40%);
+
+
 }
 
 .servicio {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
 }
 
 .servicio-1 {
-    background-color: darkviolet;
+  background-color: darkviolet;
 }
 
 .servicio-2 {
-    background-color: limegreen;
+  background-color: limegreen;
 }
+
 .servicio-3 {
-    background-color: teal;
+  background-color: teal;
 }

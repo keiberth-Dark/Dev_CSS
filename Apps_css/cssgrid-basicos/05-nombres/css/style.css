@@ -1,54 +1,66 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;  
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 h1 {
-    margin: 0;
+  margin: 0;
 }
+
 img {
-    width: 100%;
+  width: 100%;
 }
 
 .contenedor {
-    height: 100vh;
-    width: 900px;
-    margin: 0 auto;
+  height: 100vh;
+  width: 900px;
+  margin: 0 auto;
+  display: grid;
+  /* rows and colums */
+  grid: 100px auto 100px / repeat(4, 25%);
+  grid-template-areas:
+    "header header header header"
+    "principal principal principal sidebar"
+    "footer footer footer footer"
+    /* ". footer footer footer" */
+  ;
+  grid-gap: 1rem;
+  /* 
+	grid-row-gap: 1rem;
+	grid-column-gap: 1rem; */
 }
 
-.header {
-    background-color: coral;
-    color: white;
-    text-align: center;
-}
-
-.contenido-principal {
-    background-color: darkred;
-}
-.sidebar {
-    background-color: olive;
-}
-.footer {
-    background-color: navy;
-}
 
 
 
 .contenedor-media {
-    margin: 0 auto;
-    max-width: 800px;
+  margin: 0 auto;
+  max-width: 800px;
+  display: grid;
+  grid-template-areas:
+    "titulo titulo titulo titulo"
+    "imagen desc desc desc"
+  ;
+  grid-gap: 1rem;
 }
 
 
 .titulo {
-   
-}
-.slogan {
+  grid-area: titulo;
 }
 
+.descripcion {
+  grid-area: desc;
+
+}
+
+.slogan {}
+
 .imagen {
+  grid-area: imagen;
 }
-.info {
-}
-.entrada {
-}
+
+.info {}
+
+.entrada {}
