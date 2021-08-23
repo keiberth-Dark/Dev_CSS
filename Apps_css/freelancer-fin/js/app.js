@@ -1,18 +1,18 @@
-document.addEventListener('DOMContentLoaded', function() {
-     cargarPortafolio();
+document.addEventListener('DOMContentLoaded', function () {
+	cargarPortafolio();
 });
 
 
 function cargarPortafolio() {
-    fetch('datos.json')
-    .then(function(respuesta) {
-        return respuesta.json();
-    })
-    .then(function(datos) {
-        let html = ''
-        datos.portafolio.forEach( portafolio => {
-            // crear el template
-            html += `   
+	fetch('datos.json')
+		.then(function (respuesta) {
+			return respuesta.json();
+		})
+		.then(function (datos) {
+			let html = ''
+			datos.portafolio.forEach(portafolio => {
+				// crear el template
+				html += `   
                 <div class="elemento">
                     <img src="img/${portafolio.id}.jpg">
                     <div class="contenido">
@@ -20,12 +20,12 @@ function cargarPortafolio() {
                         <p>${portafolio.desc}</p>
                     </div>
                 </div>
-            `;            
-        });
-        // despues de recorrer, lo inyectamos
-        document.querySelector('#listado').innerHTML = html;
-    })
-    .catch(function(error) {
-        console.log(error);
-    });
+            `;
+			});
+			// despues de recorrer, lo inyectamos
+			document.querySelector('#listado').innerHTML = html;
+		})
+		.catch(function (error) {
+			console.log(error);
+		});
 }
